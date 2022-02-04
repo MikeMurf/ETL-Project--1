@@ -1,0 +1,54 @@
+confirmed-cases
+-
+conf_case_id INT
+province_state PK varchar(30) 
+country_region varchar(30) 
+lat float
+lon float
+death_id INT FK>--deaths.death_id
+
+
+deaths
+-
+death_id INT 
+province_state PK varchar(30)  
+country_region varchar(30)  
+lat float 
+lon float 
+conf_case_id INT FK>--confirmed-cases.conf_case_id
+
+recovered
+-
+province_state PK varchar(30) 
+country_region varchar(30)  
+lat float 
+lon float 
+conf_case_id FK>--confirmed-cases.conf_case_id
+
+
+vaccine_data 
+-
+province_state PK varchar(30)
+country_region varchar(30)
+date date
+Doses_admin int
+partially_vac int
+fully_vac int
+date_str vadchar
+uid int
+conf_case_id INT FK>--confirmed-cases.conf_case_id
+
+
+
+world_pop
+-
+country_name varchar(30)
+country_code varchar(30)
+indicator_code varchar(20)
+pop_year int
+conf_case_id INT FK>--confirmed-cases.conf_case_id
+
+
+
+
+
