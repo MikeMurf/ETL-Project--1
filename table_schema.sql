@@ -32,7 +32,8 @@ CREATE TABLE "vaccinations" (
     "country_id" VARCHAR(255)   NOT NULL,
     "date" VARCHAR(255)   NOT NULL,
     "fully_vaccinated_per_hundred" INT   NOT NULL,
-    "not_fully_vaccinated_per_hundred" INT   NOT NULL
+    "not_fully_vaccinated_per_hundred" INT   NOT NULL,
+    "boosted_per_hundred" INT   NOT NULL
 );
 
 ALTER TABLE "covid_cases" ADD CONSTRAINT "fk_covid_cases_country_id" FOREIGN KEY("country_id")
