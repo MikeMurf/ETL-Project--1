@@ -1,8 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
-
-CREATE TABLE "country_codes" (
+﻿CREATE TABLE "country_codes" (
     "country_id" VARCHAR(255)   NOT NULL,
     "country_name" VARCHAR(255)   NOT NULL,
     "continent_name" VARCHAR(255)   NOT NULL,
@@ -25,7 +21,7 @@ CREATE TABLE "covid_cases" (
 
 CREATE TABLE "population" (
     "country_id" VARCHAR(255)   NOT NULL,
-    "population" INT   NOT NULL
+    "population" BIGINT   NOT NULL
 );
 
 CREATE TABLE "vaccinations" (
