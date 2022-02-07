@@ -81,60 +81,53 @@ The QuickDB code used to create the data base schema follows.
 ### 6.		Database Schema – Entity Relationship Diagram 
 
 ![image](https://user-images.githubusercontent.com/89948865/152876605-b5288a80-fbd8-4f25-87dc-96fc2a649dd2.png)
-
 				
-7.	Database Description
+### 7.	Database Description
 The  key to the data base was to use the International Standards Organisation (iso_code: ISO 3166-1 alpha-3 – three-letter country code) henceforth referred to as “iso-code”, to create relationships between the tables. 
 The “country-codes” table contains the  “iso-code” and matching “country-name” for all countries covered by the “iso-code” and was generated during the Extraction phase of the project.
 The “covid-cases” table contains the basic cleansed data from the JHU Data Sets which form the basis of the global view of Covid-19 cases.
 The “vaccinations” table contains vaccination status from the Our World in data Vaccination data set.
     
-
-
-
-8.	Database Meta Data   
+### 8.	Database Meta Data   
 “country” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	country-name: 	the name of the country in the ISO data set
+*    country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+*    country-name: 	the name of the country in the ISO data set
 
 “covid-cases” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	date: 		date of the observation
-•	confirmed:	the total number of cumulative confirmed Covid-19 cases regardless of the variant
-•	deaths:	the total number of cumulative deaths attributed to Covid-19 regardless of the variant
-•	recovered:	the total number of cumulative recovered Covid-19 cases
-•	active:		the total number of cumulative active Covid-19 cases
-•	new_cases:	the total number of incremental new  Covid-19 cases
-•	new_deaths:	the total number of incremental new Covid-19 deaths
-•	new_ recovered:
-			the total number of incremental new recovered Covid-19 cases
+*    country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+*    date: 		date of the observation
+*    confirmed:	the total number of cumulative confirmed Covid-19 cases regardless of the variant
+*    deaths:	the total number of cumulative deaths attributed to Covid-19 regardless of the variant
+*    recovered:	the total number of cumulative recovered Covid-19 cases
+*    active:		the total number of cumulative active Covid-19 cases
+*    new_cases:	the total number of incremental new  Covid-19 cases
+*    new_deaths:	the total number of incremental new Covid-19 deaths
+*    new_ recovered:	the total number of incremental new recovered Covid-19 cases
 
 “population” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	population: 	the population of the country at 31/12/2020
+*    country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+*    population: 	the population of the country at 31/12/2020
 
 “vaccinations” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	date: 		date of the observation
-•	people_vaccinated_per_hundred:
-total number of people who received at least one vaccine dose. If a person receives the first dose of a 2-dose vaccine, this metric goes up by 1. If they receive the second dose, the metric stays the same i.e., 1.
-•	fully_vaccinated_per_hundred:
-people vaccinated per 100 people in the total population of the country. If a person receives the first dose of a 2-dose vaccine, this metric stays the same. If they receive the second dose, the metric goes up by 1.
-•	not_fully_vaccinated_per_hundred:
- people not vaccinated per 100 people in the total population of the country
-•	boosted_per_hundred:
-people who have received their booster dose per 100 people in the total population of the country
+*    country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+*    date: 		date of the observation
+*    people_vaccinated_per_hundred:
+*        total number of people who received at least one vaccine dose. If a person receives the first dose of a 2-dose vaccine, this metric goes up by 1. If they receive the *        second dose, the metric stays the same i.e., 1.
+*    fully_vaccinated_per_hundred:
+*        people vaccinated per 100 people in the total population of the country. If a person receives the first dose of a 2-dose vaccine, this metric stays the same. If they *        receive the second dose, the metric goes up by 1.
+*    not_fully_vaccinated_per_hundred:
+*        people not vaccinated per 100 people in the total population of the country
+*    boosted_per_hundred:
+    *    people who have received their booster dose per 100 people in the total population of the country
 
- 
-
-9.	Data Extract:
+### 9.	Data Extract:
 
 The Extract phase of the assignment uses urls / wget downloads in place of API calls are they are not available for the datasets needed. The three JHU time series data sets are retrieved using this method.
 
 The Vaccination and Population data sets are downloaded from their respective sites as CSV files.
 
 
-10.	Data Transform:
+### 10.	Data Transform:
 
 The data Transform steps are as follows:
 1)	 Save DFs to CSVs to do exploratory data analysis.
