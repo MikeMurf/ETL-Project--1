@@ -1,55 +1,50 @@
 # Project-2
-## Extract, Transform, and Load project for the Monash Data Analytical Bootcamp
+## Extract, Transform, and Load Project for the Monash Data Analytical Bootcamp
 
-
-1.	Project Overview:   
+### 1.	Project Overview:   
 The project was initiated to satisfy the requirements of the Extract, Transform, and Load assignment for the Monash Data Analytical Bootcamp.
 These requirements are:
-•	“You must have two (minimum) or more sources of data
-•	Recommended sources: 
-o	Kaggle
-o	Data.world 
-o	Google Dataset Search (https://datasetsearch.research.google.com/)
-o	 APIs may be used as an alternative source
-•	Once your datasets are identified, perform ETL and create documentation.
-•	Documentation must have:
-o	Datasets used and their sources
-o	Types of data wrangling performed (data cleaning, joining, filtering, and aggregating)
-o	The schemata used in the final production database”
+*    “You must have two (minimum) or more sources of data
+*        Recommended sources: 
+*        Kaggle
+*        Data.world 
+*        Google Dataset Search (https://datasetsearch.research.google.com/)
+*    APIs may be used as an alternative source
+*    Once your datasets are identified, perform ETL and create documentation.
+*    Documentation must have:
+*        Datasets used and their sources
+*        Types of data wrangling performed (data cleaning, joining, filtering, and aggregating)
+*        The schemata used in the final production database”
 
-2.	Team Members:   		Megan Greenhill 
-Hesh Kuruppuge
-Jacqueline Xia 
-Mike Murphy
+### 2.	Team Members: 
+		Megan Greenhill 
+		Hesh Kuruppuge 
+		Jacqueline Xia 
+		Mike Murphy
 
-3.	Project Brief Description:
+### 3.	Project Brief Description:
 The project uses John Hopkins University Covid-19 datasets sourced from the Google Dataset Search, and related datasets to extract the required data to create an integrated database that can be used to provide ongoing analysis of Covid_19 and its global impact. 
 
-4.	Project Rationale:
+### 4.	Project Rationale:
 In addition to satisfying the requirements of the assignment, the project provides a much-needed solution for analysing global Covid-19 trends.
 There is currently no single source that provides a comprehensive, integrated view of the global Covid-19 pandemic. To get a comprehensive overview you have to use multiple data sources and combine their outputs to get a single view. 
 This project combines the main sources of global Covid data, global vaccination data and global population data to provide a single, integrated source of information in a relational database and to provide basic queries to retrieve views of  the data. These queries can then be  adapted to provide ad hoc query capability.
 The database can be updated as frequently as required and will facilitate analysis that currently requires searches of disparate source datasets.
  
+### 5.	Project Datasets: 
+  The datasets for the project can be found at the following links. 
+*    “JHU – Time Series Daily Reports” 
+*         https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv  
 
+*    “World population data” 
+*        https://www.worldometers.info/world-population/population-by-country/ 
 
-
-5.	Project Datasets: 
-  The datasets for the project can be found at the following links.
-	“JHU – Time Series Daily Reports”
-https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv
-
-		“World population data”
-https://www.worldometers.info/world-population/population-by-country/
-“Vaccination rates per country”
-https://ourworldindata.org/covid-vaccinations?		
+*    “Vaccination rates per country”
+*        https://ourworldindata.org/covid-vaccinations?		
  
-	
+### 5.	Database QuickDB Code 
+The QuickDB code used to create the data base schema follows.  
 
-
-
-5.	Database QuickDB Code 
-The QuickDB code used to create the data base schema follows.
 {\rtf1\ansi\ansicpg1252\cocoartf2580
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
