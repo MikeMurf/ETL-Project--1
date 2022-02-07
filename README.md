@@ -124,21 +124,21 @@ The “vaccinations” table contains vaccination status from the Our World in d
 
 The Extract phase of the assignment uses urls / wget downloads in place of API calls are they are not available for the datasets needed. The three JHU time series data sets are retrieved using this method.
 
-The Vaccination and Population data sets are downloaded from their respective sites as CSV files.
-
+The Vaccination and Population data sets are downloaded from their respective sites as CSV files using the Pandas pd.read_csv function.
 
 ### 10.	Data Transform:
 
 The data Transform steps are as follows:
-1)	 Save DFs to CSVs to do exploratory data analysis.
-2)	 Conduct exploratory data analysis.
-3)	 Use melt() to unpivot DataFrames from current wide format 265 rows × 749 columns              into long format 208600 rows × 6 columns.
-4)	Remove recovered data for Canada due to mismatch issue. Canada recovered data is counted for the whole Country instead of by Province/State which is how Canada and the rest of the world count data for "Confirmed Cases" and "Deaths".
- We could apportion recovered data for the country across the Province/States in the same ratio as   confirmed cases time permitting
+1)	Save DFs to CSVs to do exploratory data analysis.
+2)	Conduct exploratory data analysis.
+3)	Use melt() to unpivot DataFrames from current wide format 265 rows × 749 columns              into long format 208600 rows × 6 columns.
+4)	Remove recovered data for Canada due to mismatch issue. Canada recovered data is counted for the whole Country instead of by Province/State which is how Canada and           the rest of the world count data for "Confirmed Cases" and "Deaths".
+        We could apportion recovered data for the country across the Province/States in the same ratio as confirmed cases but this is not recommended as best practice as it
+	arbitrarily interferes with source data.
 5)	Merge the three JHU dataframes, Confirmed Cases, Deaths, Recovered Cases.
-a.	merge confirmed_df_long and deaths_df_long into full_table
-b.	merge full_table and recovered_df_long
-6)	Check Canada data in "full_table" - "recovered" should be 0 and check of CSV file confirms that it is.
+*        a.	merge confirmed_df_long and deaths_df_long into full_table
+*        b.	merge full_table and recovered_df_long
+6)	Check Canada data in "full_table" - "recovered" should be 0 and a check of CSV file confirms that it is.
 7)	Convert date from string to datetime.
 8)	Detect missing values NaN.
 9)	Replace 'recovered' NaNs with zero.
@@ -149,53 +149,53 @@ b.	merge full_table and recovered_df_long
 14)	Use pd.merge to group the final data frame on Country/Region / Date.
 15)	Fix the new data types as integer.
 16)	The final data frame is sorted by Date and Country/Region ascending where: -	
- Confirmed Cases, Deaths, Recovered and Active are cumulative data for the   entire period, and, 
- New cases, New deaths and New Recovered are daily incremental data.
+*           Confirmed Cases, Deaths, Recovered and Active are cumulative data for the   entire period, and, 
+*           New cases, New deaths and New Recovered are daily incremental data.
 17)	Convert data frame to a csv file for backup.
 18)	Select Australia to check that data is correct. Validate the final data frame against the JHU Dashboard for 06/02/2022.
-Both showed Confirmed Cases = 2,704,275 and Deaths = 4,154 for Australia.
+*           Both showed Confirmed Cases = 2,704,275 and Deaths = 4,154 for Australia.
 19)	Read the Vaccination dataset - csv file into a data frame.
 20)	Derive the “people_not_vaccinated” from the “people_fully_vaccinated”.
+21)	Detect missing values NaN 
+22)	Replace NaNs with zero
+23)	Data cleansing replace ”United States” with “US” to standardise data.
+24)	Save cleansed vaccination data to a CSV for backup.
+25)	Read the Population data set - csv file into a data frame.
+26)	Detect missing values NaN 
+27)	Replace NaNs with zero
+28)	Save cleansed Population data to a CSV for backup.
+29)	Copy OWID Vaccination data frame, as we want to use OWID country codes.
+30)	Add Africas to match population data frame.
+31)	Edit “full_grouped” covid case data frame to include country ID.
+32)	Change structure of data frames to match structure of tables created in the database.
+33)	Set index of country codes data frame and remove null index row.
+34)	Covid Cases table - copy only the columns needed into a new Data Frame.
+35)	Rename columns to fit the tables created in the database.
+36)	Vaccinations table - copy only the columns needed into a new Data Frame.
+37)	Rename columns to fit the tables created in the database.
+38)	Create PostgreSQL database connection.
+39)	Confirm database tables.
+40)	Load data frames to database tables
 
 
+### 11.	 Exploratory Data Analysis Using Pandas Profiling:
+We tried using Pandas Profiling to analyse the merged JHU data frames but the analysis ran for 15 hours and only completed 18% of the analysis 
+in that time so it was aborted. At that rate it would have taken in excess of 83 hours to complete the analysis. This will be revisited after the Project-2 assignment has been submitted.
+Instead, we ran Pandas Profiling on the 3 data frames produced from the Extract / Transform process to validate their integrity. 
 
-
-21)	 Detect missing values NaN 
-22)	 Replace NaNs with zero
-23)	 Data cleansing replace ”United States” with “US” to standardise data.
-24)	 Save cleansed vaccination data to a CSV for backup.
-25)	 Read the Population data set - csv file into a data frame.
-26)	 Detect missing values NaN 
-27)	 Replace NaNs with zero
-28)	 Save cleansed Population data to a CSV for backup.
-29)	 Copy OWID Vaccination data frame, as we want to use OWID country codes.
-30)	 Add Africas to match population data frame.
-31)	  Edit “full_grouped” covid case data frame to include country ID.
-32)	  Change structure of data frames to match structure of tables created in the database.
-33)	  Set index of country codes data frame and remove null index row.
-34)	 Covid Cases table - copy only the columns needed into a new Data Frame.
-35)	 Rename columns to fit the tables created in the database.
-36)	 Vaccinations table - copy only the columns needed into a new Data Frame.
-37)	 Rename columns to fit the tables created in the database.
-38)	 Create PostgreSQL database connection.
-39)	  Confirm database tables.
-40)	 Load data frames to database tables
-
-
-11.	 Exploratory Data Analysis Using Pandas Profiling:
-
-1)	EDA – Confirmed Cases
+#### 1)	EDA – Confirmed Cases
 
 The exploratory data analysis for Confirmed Cases ran successfully. The Output Report is located in the first appended Chrome HTML document. 
 
-2)	EDA – Vaccinations
+#### 2)	EDA – Vaccinations
 
 The exploratory data analysis for Vaccinations ran successfully. The Output Report is located in the second appended Chrome HTML document. 
 
-
-3)	EDA – World Population
+#### 3)	EDA – World Population
 
 The exploratory data analysis for World Population  ran successfully. The Output Report is located in the third appended Chrome HTML document.
+
+______________________________________________________________________________________________________________________________________________________________________________
 
 
 
