@@ -1,49 +1,31 @@
-confirmed-cases
+country_codes
 -
-conf_case_id PK INT 
-province_state PK VARCHAR(30) 
-country_region VARCHAR(30) 
-lat FLOAT
-lon FLOAT
+country_id VARCHAR(255)
+country_name VARCHAR(255)
+continent_name VARCHAR(255)
 
-
-deaths
+covid_cases
 -
-death_id INT 
-province_state PK VARCHAR(30)  
-country_region VARCHAR(30)  
-lat FLOAT
-lon FLOAT 
-conf_case_id INT FK>- confirmed-cases.conf_case_id 
+country_id VARCHAR(255) FK - country_codes.country_id
+date VARCHAR(255)
+confirmed INT
+deaths INT
+recovered INT
+active INT
+new_cases INT
+new_deaths INT
+new_recovered INT
 
-
-
-recovered
+population
 -
-province_state PK VARCHAR(30) 
-country_region VARCHAR(30)  
-lat FLOAT 
-lon FLOAT
-conf_case_id INT FK>- confirmed-cases.conf_case_id 
+country_id VARCHAR(255) FK - country_codes.country_id
+population INT
 
 
-vaccine_data 
+vaccinations
 -
-province_state PK VARCHAR(30)
-country_region VARCHAR(30)
-date DATE
-Doses_admin INT
-partially_vac INT
-fully_vac INT
-date_str VARCHAR
-uid INT
-conf_case_id INT FK>- confirmed-cases.conf_case_id 
-
-
-world_pop
--
-country_name VARCHAR(30)
-country_code VARCHAR(30)
-indicator_code VARCHAR(20)
-pop_year INT
-conf_case_id INT FK>- confirmed-cases.conf_case_id 
+country_id VARCHAR(255) FK - country_codes.country_id
+date VARCHAR(255)
+fully_vaccinated_per_hundred INT
+not_fully_vaccinated_per_hundred INT
+boosted_per_hundred INT
