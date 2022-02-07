@@ -1,0 +1,31 @@
+country_codes
+-
+country_id VARCHAR(255) PK
+country_name VARCHAR(255)
+continent_name VARCHAR(255)
+
+covid_cases
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+date VARCHAR(255)
+confirmed INT
+deaths INT
+recovered INT
+active INT
+new_cases INT
+new_deaths INT
+new_recovered INT
+
+population
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+population INT
+
+vaccinations
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+date VARCHAR(255)
+vaccinated_per_hundred INT
+fully_vaccinated_per_hundred INT
+boosted_per_hundred INT
+not_fully_vaccinated_per_hundred INT
