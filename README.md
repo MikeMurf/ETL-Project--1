@@ -80,9 +80,8 @@ The QuickDB code used to create the data base schema follows.
 
 ### 6.		Database Schema – Entity Relationship Diagram 
 
-				![image](https://user-images.githubusercontent.com/89948865/152876211-832239f5-6826-497a-9459-69db1ac04f0c.png) 
+![image](https://user-images.githubusercontent.com/89948865/152876211-832239f5-6826-497a-9459-69db1ac04f0c.png) 
 				
-
 7.	Database Description
 The  key to the data base was to use the International Standards Organisation (iso_code: ISO 3166-1 alpha-3 – three-letter country code) henceforth referred to as “iso-code”, to create relationships between the tables. 
 The “country-codes” table contains the  “iso-code” and matching “country-name” for all countries covered by the “iso-code” and was generated during the Extraction phase of the project.
