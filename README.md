@@ -4,11 +4,12 @@
 ### 1.	Project Overview:   
 The project was initiated to satisfy the requirements of the Extract, Transform, and Load assignment for the Monash Data Analytical Bootcamp.
 These requirements are:
-*    “You must have two (minimum) or more sources of data
-*        Recommended sources: 
-*        Kaggle
-*        Data.world 
-*        Google Dataset Search (https://datasetsearch.research.google.com/)
+*   “You must have two (minimum) or more sources of data
+*   Recommended sources: 
+*       Kaggle
+*       Data.world 
+*       Google Dataset Search (https://datasetsearch.research.google.com/) 
+
 *    APIs may be used as an alternative source
 *    Once your datasets are identified, perform ETL and create documentation.
 *    Documentation must have:
