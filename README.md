@@ -17,6 +17,14 @@ These requirements are:
 *        Types of data wrangling performed (data cleaning, joining, filtering, and aggregating)
 *        The schemata used in the final production database”
 
+The “Project-2” directory contains the following files submitted for assessment:
+*    “create-covid-db” – the Jupyter Notebook used to conduct the extract, transform and load,
+*    “eda” – the Jupyter Notebook used to conduct the Pandas Profiling analysis on the Covid_Cases, Vaccinations and World_Population datasets produced by “create-covid-db”, 
+*    “Project-2-report” – the project report describing the process used and the outputs produced by the extract, transform and load,
+*    “Project-2” – the Powerpoint presentation for the project.
+
+The files can be run from this directory. 
+
 ### 2.	Team Members: 
 		Megan Greenhill 
 		Hesh Kuruppuge 
