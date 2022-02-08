@@ -24,7 +24,9 @@ The “Project-2” directory contains the following files submitted for assessm
 *    “Project-2” – the Powerpoint presentation for the project,
 *    "project-2-project-proposal" - the original proposal for the project.
 
-The files can be run from this directory. 
+The files can be run from this current directory.
+
+*    NOTE: the "exported_CSVs" directory contains the Covid_Cases, Vaccinations and World_Population datasets produced by “create-covid-db”. 
 
 ### 2.	Team Members: 
 		Megan Greenhill 
