@@ -21,7 +21,8 @@ The “Project-2” directory contains the following files submitted for assessm
 *    “create-covid-db” – the Jupyter Notebook used to conduct the extract, transform and load,
 *    “eda” – the Jupyter Notebook used to conduct the Pandas Profiling analysis on the Covid_Cases, Vaccinations and World_Population datasets produced by “create-covid-db”, 
 *    “Project-2-report” – the project report describing the process used and the outputs produced by the extract, transform and load,
-*    “Project-2” – the Powerpoint presentation for the project.
+*    “Project-2” – the Powerpoint presentation for the project,
+*    "project-2-project-proposal" - the original proposal for the project.
 
 The files can be run from this directory. 
 
