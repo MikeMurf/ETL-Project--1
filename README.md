@@ -1,3 +1,6 @@
+### Please note that the Project-2-new repository was created to overcome a problem with Mike's local Git repository and contains all of the files for assessment for the ETL assignemnt. All the project work was originally conducted in this - MikeMurf/Project-2 repository and should be used for view of the project team's collaborative work. Many thanks.
+
+
 # Project-2
 ## Extract, Transform, and Load Project for the Monash Data Analytical Bootcamp
 
