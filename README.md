@@ -1,8 +1,6 @@
-### Please note that the ETL-Project-1 repository was created to overcome a problem with Mike's local Git repository and contains all of the files for assessment for the ETL assignment. All the project work was originally conducted in the - MikeMurf/ETL-Project-0 repository and should be used for a view of the project team's collaborative work. Many thanks.
+### Please note that the ETL-Project-0 repository was created for assessment and to overcome a problem with Mike's local Git repository. This ETL-Project-1 repository contains all of the team's collaborative files for the assignment. All the project work was originally conducted in this - MikeMurf/ETL-Project-1 repository and should be used for a view of the project team's collaborative work. Many thanks.
 
-
-# Project-2
-## Extract, Transform, and Load Project for the Monash Data Analytical Bootcamp
+### Extract, Transform, and Load Project for the Monash Data Analytical Bootcamp
 
 ### 1.	Project Overview:   
 The project was initiated to satisfy the requirements of the Extract, Transform, and Load assignment for the Monash Data Analytical Bootcamp.
